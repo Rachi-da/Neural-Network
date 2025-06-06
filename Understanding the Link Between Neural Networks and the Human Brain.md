@@ -159,7 +159,7 @@ Then you’re seeing how machine learning **borrows from nature**, but makes it 
 
 Would a diagram of both perspectives help you even more?
 ---
-![Alt text](Images/NN and Brain.png)
+![Alt text](Images/NN_Brain.png)
 In the image above (titled **"Neural Networks and the Brain: How Are They Connected?"**), here's where the **neurons** are represented:
 
 ---
