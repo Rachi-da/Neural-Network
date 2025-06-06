@@ -158,4 +158,40 @@ If you imagine:
 Then you’re seeing how machine learning **borrows from nature**, but makes it **computable**.
 
 Would a diagram of both perspectives help you even more?
+---
+![Alt text](Images/NN and Brain.png)
+In the image above (titled **"Neural Networks and the Brain: How Are They Connected?"**), here's where the **neurons** are represented:
+
+---
+
+### 🧠 Left Side: **Biological Brain**
+
+* The **entire structure** is a **single biological neuron**.
+* It includes:
+
+  * **Dendrites**: the blue tree-like branches that **receive signals**.
+  * **Cell Body (Soma)**: where signals are processed.
+  * **Nucleus**: center of control (inside the soma).
+  * **Axon**: long tail that **sends the signal forward**.
+  * **Synapse**: connection to the next neuron.
+
+🟢 This is one **neuron**, but in reality, many such neurons are connected together — this image just shows one for simplicity.
+
+---
+
+### 🖥️ Right Side: **Artificial Neuron**
+
+* This is **also a single artificial neuron**.
+* It shows:
+
+  * Multiple **Inputs** (like dendrites).
+  * A **Weighted Sum** (like the soma).
+  * An **Activation Function** (like the neuron deciding to "fire").
+  * An **Output** (like the axon/synapse sending signal to next neuron).
+
+🟢 Again, it’s just one neuron in the diagram. In a real neural network, **many such neurons are connected into layers**.
+
+---
+
+Would you like me to generate a follow-up diagram showing **multiple neurons connected in layers** (input → hidden → output)?
 
