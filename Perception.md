@@ -128,4 +128,7 @@ Where:
 
 Would you like to see this in a simple Python code example?
 
+Here's a step-by-step view of how the perceptron updates its weights and bias over training iterations. You can see how the **initial random weights** get adjusted each time an error is made, bringing the model closer to correctly learning the logic of the AND function.
+
+Let me know if you want a version for OR or XOR logic, or if you'd like to visualize the learning process!
 
