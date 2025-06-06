@@ -73,3 +73,13 @@ print("Sigmoid:", sigmoid(x))
 ---
 
 Would you like a visual chart comparing them side by side?
+Here are visual plots of the most common activation functions:
+
+* **Step**: Outputs 0 or 1 — used in simple perceptrons
+* **Sigmoid**: Smooth curve from 0 to 1 — good for probabilities
+* **Tanh**: Outputs between -1 and 1 — centered around 0
+* **ReLU**: Zero for negative values, linear for positive — very popular in deep learning
+* **Leaky ReLU**: Like ReLU but allows a small slope for negative values to avoid "dying" neurons
+
+Would you like help choosing which activation function to use in different scenarios?
+ouput.png
