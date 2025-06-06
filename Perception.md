@@ -63,3 +63,69 @@ Suppose you want to detect if a student will pass:
 ---
 
 Would you like a diagram of a perceptron or a code example to try it yourself?
+(perception.png)
+Excellent question! The **weights** like `w₁ = 0.6` and `w₂ = 0.4` in a perceptron are not fixed — they are **learned** during training.
+
+Let’s explain this step by step:
+
+---
+
+### 🔶 How Are Weights Assigned?
+
+#### 🟡 Step 1: **Initialize Randomly**
+
+* At first, the weights are usually **assigned randomly** (e.g., `w₁ = 0.6`, `w₂ = 0.4`).
+* The idea is to **start somewhere**, even if it’s wrong.
+
+#### 🟡 Step 2: **Make a Prediction**
+
+* The perceptron takes the inputs and computes the **weighted sum**:
+
+  $$
+  z = w₁ \cdot x₁ + w₂ \cdot x₂ + \text{bias}
+  $$
+* This is passed through the **activation function** to produce the **output**.
+
+#### 🟡 Step 3: **Compare to Actual Output**
+
+* If the prediction is wrong, the perceptron **adjusts the weights** to reduce the error.
+
+---
+
+### 🔧 Perceptron Learning Rule
+
+If the output is incorrect, update each weight:
+
+$$
+w_i = w_i + \Delta w_i
+$$
+
+$$
+\Delta w_i = \text{learning_rate} \cdot (y - \hat{y}) \cdot x_i
+$$
+
+Where:
+
+* $y$ = true label (expected output)
+* $\hat{y}$ = predicted output
+* $x_i$ = input
+* learning\_rate = small value like 0.01 or 0.1
+
+📌 This formula **nudges** the weights in the direction that reduces the error.
+
+---
+
+### ✅ Summary:
+
+| Step       | What Happens                                     |
+| ---------- | ------------------------------------------------ |
+| Initialize | Start with random weights                        |
+| Predict    | Compute output using current weights             |
+| Compare    | Calculate the error between predicted and actual |
+| Update     | Adjust the weights to reduce the error           |
+
+---
+
+Would you like to see this in a simple Python code example?
+
+
