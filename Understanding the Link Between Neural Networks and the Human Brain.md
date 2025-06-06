@@ -63,7 +63,47 @@ Because:
 ---
 
 Would you like a diagram or code example to visualize this analogy?
+---
+Great follow-up — those are key parts of a **biological neuron**, and we can directly relate them to parts of an **artificial neuron** to deepen the analogy.
 
+---
+
+### 🧠 Biological Neuron Structure vs. Artificial Neuron
+
+| **Biological Neuron Part** | **Function in Brain**                                   | **Equivalent in Neural Network**                          |
+| -------------------------- | ------------------------------------------------------- | --------------------------------------------------------- |
+| **Dendrites**              | Receive input signals from other neurons                | **Input values (features)**                               |
+| **Cell Body (Soma)**       | Processes inputs, integrates the signal                 | **Weighted sum + bias calculation**                       |
+| **Nucleus**                | Controls cell’s internal operations (genetic blueprint) | No exact equivalent; resembles **model structure/config** |
+| **Axon**                   | Sends the output signal to other neurons                | **Output of the activation function**                     |
+| **Synapse**                | Connection between neurons; strength determines signal  | **Weight between neurons**                                |
+
+---
+
+### 🔶 Mapping It Visually
+
+```
+Biological Neuron           Artificial Neuron
+------------------          ---------------------
+Dendrites        →          Inputs (x₁, x₂, x₃...)
+Cell Body        →          Weighted sum: w₁x₁ + w₂x₂ + ... + b
+Activation       →          Activation function (e.g., ReLU, sigmoid)
+Axon             →          Output of neuron (passed to next layer)
+Synapse strength →          Weight values (adjusted during learning)
+```
+
+---
+
+### 📘 Possible Title (Updated)
+
+If you want a title that includes these parts:
+
+* **"From Dendrites to Axons: Understanding Neural Networks Through the Brain"**
+* **"Neural Networks Explained with Brain Anatomy: Dendrites, Axons, and Beyond"**
+* **"How Artificial Neurons Mirror Brain Cells: Dendrites, Soma, and Synapses"**
+
+Would you like a labeled diagram comparing these side-by-side?
+-----
 
 Great — you're doing exactly what you should: trying to **connect ideas between biology and machine learning**.
 
