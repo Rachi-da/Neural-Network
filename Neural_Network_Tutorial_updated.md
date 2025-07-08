@@ -5,6 +5,22 @@
 
 A **neural network** is a machine learning model inspired by the **human brain**. It's used to recognize patterns, classify data, and make predictions.
 
+Here are **two alternate versions** of your sentence—one **simpler** for beginners, and one **more technical** for advanced learners:
+
+---
+
+### ✅ **Simpler version (for beginners):**
+
+*A neural network is a computer program that learns by looking at examples, kind of like how our brain learns. It helps computers recognize things, sort information, and guess what might happen next.*
+
+---
+
+### ✅ **More technical version (for advanced learners):**
+
+*A neural network is a computational model composed of interconnected nodes (neurons) organized in layers. It processes input data through weighted connections and activation functions to learn complex patterns, enabling tasks such as classification, regression, and feature extraction.*
+
+
+
 ---
 
 ## 🔶 Basic Structure
