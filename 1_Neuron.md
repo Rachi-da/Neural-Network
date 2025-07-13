@@ -88,7 +88,104 @@ A commonly used activation function is the **sigmoid function**:
 * It takes any number and **squashes** it into a value between **0 and 1**.
 * This helps us interpret how "active" the neuron is.
 
-You’ll learn more about different activation functions soon.
+Absolutely! Here's a clear summary of the most common **activation functions** used in neural networks, with simple explanations and when to use them:
+
+---
+
+### 🔹 1. **Sigmoid Function**
+
+Formula:
+
+$$
+\sigma(x) = \frac{1}{1 + e^{-x}}
+$$
+
+* **Output range**: (0, 1)
+* **Use for**: binary classification, where you need a probability.
+* **Pros**: smooth, simple, squashes values.
+* **Cons**: can cause **vanishing gradients** for large positive/negative inputs (learning slows down).
+
+---
+
+### 🔹 2. **Tanh (Hyperbolic Tangent)**
+
+Formula:
+
+$$
+\tanh(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}}
+$$
+
+* **Output range**: (–1, 1)
+* **Use for**: when centered output is better for learning.
+* **Pros**: like sigmoid but centered at 0.
+* **Cons**: still suffers from vanishing gradients.
+
+---
+
+### 🔹 3. **ReLU (Rectified Linear Unit)**
+
+Formula:
+
+$$
+f(x) = \max(0, x)
+$$
+
+* **Output range**: \[0, ∞)
+* **Use for**: most modern deep networks.
+* **Pros**: fast, simple, avoids vanishing gradient for positive values.
+* **Cons**: can cause **"dead neurons"** (when outputs get stuck at 0).
+
+---
+
+### 🔹 4. **Leaky ReLU**
+
+Formula:
+
+$$
+f(x) = 
+\begin{cases}
+x & \text{if } x > 0 \\
+\alpha x & \text{if } x \leq 0
+\end{cases}
+$$
+
+(α is a small constant like 0.01)
+
+* **Output range**: (–∞, ∞)
+* **Use for**: fixing ReLU’s dead neuron problem.
+* **Pros**: allows small negative output to keep gradients flowing.
+* **Cons**: α must be chosen carefully.
+
+---
+
+### 🔹 5. **Softmax**
+
+Formula:
+
+$$
+\sigma(z_i) = \frac{e^{z_i}}{\sum_{j} e^{z_j}}
+$$
+
+* **Output range**: (0, 1), and all outputs sum to 1.
+* **Use for**: **multi-class classification** (final layer).
+* **Pros**: turns logits into probabilities.
+* **Cons**: not used in hidden layers.
+
+---
+
+### 🔹 When to use what:
+
+| Task                           | Recommended Activation |
+| ------------------------------ | ---------------------- |
+| Binary Classification          | Sigmoid (last layer)   |
+| Multi-Class Classification     | Softmax (last layer)   |
+| Hidden Layers (most tasks)     | ReLU or Leaky ReLU     |
+| Small networks or simple tasks | Tanh or Sigmoid        |
+
+---
+
+Would you like a visual table or graph comparing them?
+
 
 
 
