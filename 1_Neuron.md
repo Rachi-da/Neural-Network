@@ -183,7 +183,7 @@ $$
 | Small networks or simple tasks | Tanh or Sigmoid        |
 
 ---
-✅ Yes — a **perceptron is a type of artificial neuron**.
+# **perceptron is a type of artificial neuron**.
 
 Let’s break that down simply:
 
