@@ -58,6 +58,39 @@ Great question! Let's clarify:
 * **Axon** = sends the message.
 * **Synapse** = where the message **crosses over** to the next neuron.
 
-Let me know if you'd like a labeled step-by-step flow diagram.
+-----------------------------------------
+Here’s a simplified and easy-to-understand version of your text:
+
+---
+
+In the brain, a neuron sends signals to other neurons using long branches called **axons**, which connect to **dendrites** of other neurons through **synapses**.
+
+In a **computational model of a neuron** (like in artificial neural networks), this works in a similar way:
+
+* The **input signal** (e.g. `x₀`) travels like an axon signal.
+* It is **multiplied by a weight** (e.g. `w₀`), which represents how strong or weak the connection is.
+
+  * A **positive weight** means the neuron encourages the next one to fire (**excitatory**).
+  * A **negative weight** means it tries to prevent it from firing (**inhibitory**).
+
+All the weighted inputs from different neurons are **added together** in the receiving neuron.
+
+If the total is **large enough**, the neuron **fires** — just like a real neuron sending out a signal.
+
+In artificial neural networks:
+
+* We don’t focus on the **exact timing** of these "firings".
+* Instead, we use a **firing rate** — how strongly the neuron responds.
+* This response is modeled using an **activation function** `f`.
+
+A commonly used activation function is the **sigmoid function**:
+
+* It takes any number and **squashes** it into a value between **0 and 1**.
+* This helps us interpret how "active" the neuron is.
+
+You’ll learn more about different activation functions soon.
+
+
+
 
 
