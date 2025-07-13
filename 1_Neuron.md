@@ -183,6 +183,40 @@ $$
 | Small networks or simple tasks | Tanh or Sigmoid        |
 
 ---
+✅ Yes — a **perceptron is a type of artificial neuron**.
+
+Let’s break that down simply:
+
+---
+
+### 🧠 In short:
+
+* A **neuron** is a **general concept** in artificial neural networks:
+  It takes inputs, applies weights, sums them, and uses an activation function to produce an output.
+
+* A **perceptron** is the **simplest kind** of artificial neuron:
+
+  * Uses a **step function** as activation
+  * Produces output: **0 or 1**
+  * It was invented in the 1950s as the **foundation of neural networks**
+
+---
+
+### 💡 So:
+
+| Term              | Meaning                                                |
+| ----------------- | ------------------------------------------------------ |
+| **Neuron**        | A basic unit in a neural network                       |
+| **Perceptron**    | A specific, simple type of neuron (with step function) |
+| **Modern neuron** | Often uses smoother activation (like sigmoid, ReLU)    |
+
+---
+
+You can say:
+
+> "A perceptron is a kind of neuron — like a very basic version of the ones we use in modern neural networks."
+
+Let me know if you'd like a diagram comparing **perceptron vs modern neuron**.
 
 Would you like a visual table or graph comparing them?
 
