@@ -158,3 +158,56 @@ Would you like:
 * A confusion matrix?
 * Same in PyTorch?
 
+Great! The image shows you're building an **Artificial Neural Network (ANN)** using **PyTorch** to classify the **Iris dataset**.
+
+Let me break it down step by step for you:
+
+---
+
+### 📌 What You're Doing
+
+You're creating a neural network model called `ANNiris` using `nn.Sequential`. Here's what it means:
+
+```python
+ANNiris = nn.Sequential(
+    nn.Linear(4, 32),   # Layer 1: Input layer → Hidden layer (4 → 32 neurons)
+    nn.ReLU(),          # Activation: ReLU
+    nn.Linear(32, 32),  # Layer 2: Hidden layer → Hidden layer (32 → 32 neurons)
+    nn.ReLU(),          # Activation: ReLU
+    nn.Linear(32, 3)    # Output layer: 32 → 3 (for 3 classes in Iris)
+)
+```
+
+---
+
+### 🧠 Network Architecture
+
+| Layer  | Operation           | Shape                 | Notes                                     |
+| ------ | ------------------- | --------------------- | ----------------------------------------- |
+| Input  | `nn.Linear(4, 32)`  | 4 input features → 32 | 4 features in Iris (sepal/petal)          |
+| Hidden | `nn.ReLU()`         | Activation            | Non-linearity                             |
+| Hidden | `nn.Linear(32, 32)` | 32 → 32               | Deepening the network                     |
+| Hidden | `nn.ReLU()`         | Activation            | Again                                     |
+| Output | `nn.Linear(32, 3)`  | 32 → 3                | 3 classes (Setosa, Versicolor, Virginica) |
+
+---
+
+### ✅ Final Output
+
+The model will output **3 numbers** (logits), which represent scores for the 3 Iris species.
+
+To convert those to probabilities, you will apply `softmax` **only during evaluation**, not in the model itself (because `CrossEntropyLoss` expects raw logits).
+
+---
+
+### 🔄 Summary
+
+* ✅ Input size = 4 (Iris features)
+* ✅ Hidden layers = 2 layers with 32 neurons each
+* ✅ Output size = 3 (3 Iris species)
+* ✅ Activation = ReLU
+* ✅ Use `CrossEntropyLoss()` (so you don’t need `softmax` in the last layer)
+
+---
+
+Would you like the full training code too (with data loading, loss, optimizer, training loop)?
