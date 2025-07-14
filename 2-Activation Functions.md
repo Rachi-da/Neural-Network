@@ -291,4 +291,39 @@ These huge gradients will make your weights explode → poor results or NaNs.
 Would you like a simple visual to compare vanishing vs exploding gradients?
 
 
+The image summarizes the **properties of the hyperbolic tangent function (tanh)**, commonly used as an activation function in neural networks. Here's a clear explanation in the neural network context:
+
+---
+
+### 🔍 What is the **tanh** activation function?
+
+The **tanh** function is a smoother alternative to the sigmoid, with output values ranging from **-1 to 1**. It’s defined as:
+
+$$
+\tanh(z) = \frac{e^z - e^{-z}}{e^z + e^{-z}}
+$$
+
+---
+
+### ✅ Properties (Explained for Neural Networks):
+
+1. **Not a perfect non-linear function — nearly linear**
+   → Around small input values (close to 0), tanh behaves almost like a straight line. It adds non-linearity but not as sharply as ReLU.
+
+2. **Somewhat okay for hidden layers**
+   → Better than sigmoid because it’s centered around 0 (helps gradients flow better), but it still **suffers from vanishing gradients** when the input is large (positive or negative).
+
+3. **Range: \[-1, 1]**
+   → This symmetric range is helpful because **negative inputs produce negative outputs**, unlike sigmoid which is always positive. This helps the model converge faster.
+
+4. **No biased average (zero-centered)**
+   → When inputs are evenly distributed around zero, the outputs will also be centered. This improves the stability of training because the gradient updates are more balanced.
+
+---
+
+### ⚠️ Limitation:
+
+* Like sigmoid, tanh **flattens out** at the extremes (close to -1 or 1), which can **reduce gradients** and **slow down learning** in deep networks — especially if many layers use tanh.
+
+Would you like a visual comparing **sigmoid vs. tanh vs. ReLU** on a single chart?
 
