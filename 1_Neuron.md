@@ -274,6 +274,61 @@ Imagine a **motion sensor light**:
 Would you like a visual to show how bias shifts the activation line?
 
 
+This is a great summary of the **key properties (and limitations)** of the **sigmoid activation function**. Let me clarify and expand each point for you:
+
+---
+
+### 🔸 1. **"Not a perfect non-linear function"**
+
+✔️ **Meaning**:
+Although the sigmoid is *technically non-linear*, in the **extreme left and right** (when input is very negative or very positive), the slope becomes nearly flat → it **acts almost linear** in practice over most of its useful range.
+
+📉 **Impact**:
+This makes it less expressive than other non-linear functions like ReLU when stacking layers.
+
+---
+
+### 🔸 2. **"Not good for hidden layers, especially in deep networks"**
+
+✔️ **Meaning**:
+When used in multiple layers, sigmoid **saturates** (output gets stuck at 0 or 1) → **gradients become very small** (called the **vanishing gradient problem**).
+
+📉 **Impact**:
+The network **stops learning** efficiently in deep architectures. That’s why modern networks use **ReLU** in hidden layers instead.
+
+---
+
+### 🔸 3. **"Good for classification layer"**
+
+✔️ **Meaning**:
+Sigmoid maps outputs to **\[0, 1]**, which is ideal for **binary classification** (probability of class 1).
+
+📊 **Use case**:
+At the **output layer**, sigmoid is commonly used when you have a **binary output** (e.g., spam vs not spam).
+
+---
+
+### 🔸 4. **"Biased average" (output average is 0.5)**
+
+✔️ **Meaning**:
+
+* The sigmoid function is **not symmetric** around 0
+* Most input values (if centered around 0) get mapped to values **above 0.5**
+* So the **average output** tends to be \~0.5 even if the input averages to 0
+
+📉 **Impact**:
+This can **bias the learning** or cause slower convergence — especially in hidden layers. **Tanh** or **ReLU** are often better choices.
+
+---
+
+### ✅ Summary of Use:
+
+| Layer                          | Should you use Sigmoid? |
+| ------------------------------ | ----------------------- |
+| Hidden Layer                   | ❌ No (use ReLU or Tanh) |
+| Output (binary classification) | ✅ Yes                   |
+
+Would you like the same kind of explanation for **ReLU** or **Tanh** next?
 
 
 
