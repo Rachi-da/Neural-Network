@@ -71,4 +71,90 @@ Would you like me to write a full example that:
 * Uses `to_categorical()`
 * Trains a neural network for classification?
 
-Let me know if your data is already numeric or still in string form.
+Great! Here's a **simple neural network classification demo using the Iris dataset** in Python with **Keras (TensorFlow backend)**:
+
+---
+
+### ✅ Step-by-Step Neural Network on Iris Dataset
+
+#### 📌 1. Install Required Packages (if not already)
+
+```bash
+pip install tensorflow scikit-learn
+```
+
+---
+
+#### 🧠 2. Python Code: Neural Network Classifier
+
+```python
+import numpy as np
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler, LabelBinarizer
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+from tensorflow.keras.utils import to_categorical
+
+# 1. Load Dataset
+iris = load_iris()
+X = iris.data  # Features
+y = iris.target  # Target labels (0, 1, 2)
+
+# 2. One-hot encode the labels
+y_encoded = to_categorical(y)
+
+# 3. Split into train and test sets
+X_train, X_test, y_train, y_test = train_test_split(X, y_encoded, test_size=0.2, random_state=42)
+
+# 4. Normalize the data
+scaler = StandardScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
+
+# 5. Build the model
+model = Sequential()
+model.add(Dense(10, input_shape=(4,), activation='relu'))  # Hidden layer
+model.add(Dense(3, activation='softmax'))  # Output layer (3 classes)
+
+# 6. Compile the model
+model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+
+# 7. Train the model
+model.fit(X_train, y_train, epochs=100, batch_size=5, verbose=1)
+
+# 8. Evaluate
+loss, accuracy = model.evaluate(X_test, y_test)
+print(f'\nTest Accuracy: {accuracy * 100:.2f}%')
+```
+
+---
+
+#### 🔍 Output Example
+
+After training, you might see:
+
+```
+Epoch 100/100
+...
+Test Accuracy: 96.67%
+```
+
+---
+
+### 📈 Explanation
+
+* **Input layer**: 4 neurons (sepal and petal measurements)
+* **Hidden layer**: 10 neurons with ReLU
+* **Output layer**: 3 neurons (for the 3 species), softmax gives probabilities
+* **Loss**: categorical crossentropy (for multi-class classification)
+* **Optimizer**: Adam (adaptive gradient method)
+
+---
+
+Would you like:
+
+* Visualization of predictions?
+* A confusion matrix?
+* Same in PyTorch?
+
