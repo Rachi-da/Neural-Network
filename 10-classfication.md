@@ -40,4 +40,56 @@ Classification is the process where a neural network assigns an input (like an i
 
 ---
 
-Let me know if you'd like this as a downloadable Word or PDF file, or with visuals added!
+Great question! Here's how to explain **where the features come from** to your students:
+
+---
+
+### 🔍 Where Do Features Come From in a Neural Network?
+
+In a **Convolutional Neural Network (CNN)**, features are **automatically learned** from the input image through several layers:
+
+---
+
+### 🔹 1. **Input Image**
+
+* You start with a raw image (e.g., a photo of a cat or parrot).
+
+---
+
+### 🔹 2. **Convolution Layers**
+
+* These layers apply **filters (kernels)** to scan the image.
+* Each filter detects a specific kind of **pattern** — like edges, colors, textures, or shapes.
+* The result is a **feature map** — a new representation of the image that highlights important parts.
+
+---
+
+### 🔹 3. **Activation Functions**
+
+* After convolution, an activation function like **ReLU** is applied.
+* It keeps only the useful signals and removes weak or negative responses.
+
+---
+
+### 🔹 4. **Pooling Layers**
+
+* These reduce the size of the feature map.
+* They keep the **strongest features** while discarding unnecessary details.
+* The output is a more compact and abstract version of the image.
+
+---
+
+### 🔹 5. **Flattening**
+
+* The final feature maps are **flattened into a 1D vector** of values (like 0.96, 0.87, etc.).
+* These values are the **features** that go into the classification layer.
+
+---
+
+### ✅ Summary for Students:
+
+> “The features come from the earlier layers of the CNN — especially convolution and pooling layers. They extract patterns from the image so the network can recognize what it sees.”
+
+---
+
+Would you like this in slide format or a diagram showing the full flow from image to prediction?
