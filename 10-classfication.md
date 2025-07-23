@@ -91,5 +91,65 @@ In a **Convolutional Neural Network (CNN)**, features are **automatically learne
 > “The features come from the earlier layers of the CNN — especially convolution and pooling layers. They extract patterns from the image so the network can recognize what it sees.”
 
 ---
+Great! You're now looking at the architecture of **ResNet-18** — a deep convolutional neural network known for its use of **residual connections**.
 
-Would you like this in slide format or a diagram showing the full flow from image to prediction?
+Here’s a clear explanation you can use for students in your lecture:
+
+---
+
+## 📊 **ResNet-18 Architecture – Explained**
+
+### 🔸 What is ResNet?
+
+* **ResNet** stands for **Residual Network**.
+* It solves the problem of deep networks forgetting what was learned in earlier layers (called the **vanishing gradient** problem).
+* It introduces **skip connections** (residual connections) to help information flow better.
+
+---
+
+### 🧱 **Layer Breakdown (as shown in the image)**
+
+1. **Input Layer**
+
+   * Image input goes into the network.
+
+2. **Initial Convolution**
+
+   * `3×3 conv, 64`: First convolutional layer with 64 filters.
+
+3. **Convolution Blocks (Each pair is a "residual block")**
+
+   * These are groups of layers where:
+
+     * Two 3×3 convolutions are stacked.
+     * A **shortcut connection** skips over them and adds directly to the output.
+   * The numbers (64, 128, 256, 512) are the number of filters (depth increases).
+   * `/2` means the spatial size is halved (stride 2 is used).
+
+4. **Residual Connections**
+
+   * The **arrows looping over** are the **identity or projection shortcuts**.
+   * They help gradients flow backward during training and preserve feature learning.
+
+5. **Avg Pooling**
+
+   * After all convolution blocks, an **average pooling layer** reduces the spatial dimension.
+
+6. **Fully Connected (FC) Layer**
+
+   * The pooled features are passed into a dense layer for classification.
+
+7. **Softmax Output**
+
+   * Gives the final probability distribution over classes.
+
+---
+
+### ✅ Summary for Students:
+
+> "ResNet-18 is a deep network made of stacked convolutional layers, but it uses shortcut (skip) connections to make sure it doesn’t forget earlier features. This helps it learn better even when it gets very deep."
+
+---
+
+Would you like this explanation added to a slide in your existing PowerPoint file?
+
